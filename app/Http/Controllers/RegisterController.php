@@ -15,7 +15,10 @@ class RegisterController extends Controller
 
         // Validación
         $this->validate($request,[
-            'name'=>'required|min:2'
+            'name'=>'required|min:5',//[required,min:5]
+            'username'=>'required|unique:users',
+            'email'=>'required|unique:users|email',
+            'password'=>'required'
         ]);
     }
 }
