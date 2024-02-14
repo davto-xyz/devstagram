@@ -77,10 +77,7 @@ Regístrate en DevStagram
                     name="pass"
                     type="password"
                     placeholder="Tu contraseña"
-                    class="border p-3 w-full rounded-lg @error('name') border-red-500
-
-                    @enderror"
-                    value="{{ old('password') }}"/>
+                    class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror"/>
             </div>
             @error('pass')
             <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2">{{$message}}</p>
@@ -96,10 +93,7 @@ Regístrate en DevStagram
                     name="pass_confirmation"
                     type="password"
                     placeholder="Repite tu contraseña"
-                    class="border p-3 w-full rounded-lg @error('name') border-red-500
-
-                    @enderror"
-                    value="{{ old('pass_confirmation') }}"/>
+                    class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror"/>
             </div>
             @error('pass_confirmation')
             <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2">{{$message}}</p>
@@ -107,7 +101,7 @@ Regístrate en DevStagram
             <input
                 type="submit"
                 value="Crear cuenta"
-                class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer uppercase font-bold w-full p-3 text-white rounded-lg">
+                class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer uppercase font-bold w-full p-3 text-white rounded-lg"/>
         </form>
     </div>
     </div>

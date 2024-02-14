@@ -18,7 +18,7 @@ class RegisterController extends Controller
             'name'=>'required|min:5',//[required,min:5]
             'username'=>'required|unique:users',
             'email'=>'required|unique:users|email',
-            'password'=>'required'
+            'password'=>'required|confirmed'
         ]);
     }
 }
