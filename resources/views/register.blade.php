@@ -56,8 +56,7 @@
                 <div class="mb-5">
                     <label for="password" class="mb-2 block uppercase text-gray-600 font-bold">Clave</label>
                     <input id="password" name="password" type="password" placeholder="Tu Clave"
-                        class="border p-3 w-full rounded-lg @error('password') border-red-600 @enderror"
-                        value="{{ old('password') }}" />
+                        class="border p-3 w-full rounded-lg @error('password') border-red-600 @enderror" />
                     @error('password')
                         <p class="bg-red-700 text-white my-2 rounded-lg text-sm p-2 text-center ">
                             {{ $message }}
