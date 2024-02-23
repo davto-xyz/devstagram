@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index(){
-        return dd('Esto es el muro');
+        return view('dashboard');
     }
 }
