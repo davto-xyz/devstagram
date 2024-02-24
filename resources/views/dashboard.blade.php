@@ -7,10 +7,11 @@
     <div class='flex justify-center'>
         <div class='w-full md:w-8/12 lg:w-8/12 md:flex'>
             <div class='md:w-8/12 lg:w-1/2 px-5'>
-                Esto es una prueba
+                <img src="{{ asset('img/usuario.svg') }}"
+                hola
             </div>
             <div class='md:w-8/12 lg:w-1/2 px-5'>
-                <p>{{ auth()->user()->username }}</p>
+                {{-- <p class='text-gray-500 text-2xl'>{{ auth()->user()->username }}</p> --}}
             </div>
 
         </div>
