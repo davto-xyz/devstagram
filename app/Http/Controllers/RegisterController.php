@@ -20,13 +20,8 @@ class RegisterController extends Controller
         $this->validate($request,[
             'name'=>'required',
             'username'=>'required|unique:users',
-<<<<<<< HEAD
-            'email'=>'required|unique:users|email',
-            'password'=>'required|confirmed'
-=======
             'email'=>'unique:users|email|required',
             'password'=>'required'
->>>>>>> 7a142de7f1d61a400de5f963e7fd46f4decffc10
         ]);
 
         //Creación del usuario en la bd

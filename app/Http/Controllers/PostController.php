@@ -13,4 +13,8 @@ class PostController extends Controller
     public function index(){
         return view('dashboard');
     }
+    public function create()
+    {
+       dd('Creando post'); 
+    }
 }
