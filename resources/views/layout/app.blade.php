@@ -3,10 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        @stack('styles')
+        @stack('script')
         <link href="{{asset('css/app.css')}}" rel="stylesheet">
         <title>DevStagram</title>
 
-        @vite('resources/css/app.css')
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="antialiased ">
         <header class="p-5 border-t-2 border-b shadow bg-white">
@@ -20,7 +22,9 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z" />
 </svg>
 Crear post</a>
-                        <p class='font-bold uppercase content-center'>Hola:{{ auth()->user()->name }}</p>
+    <a href="{{ route('posts.index',Auth::user()->username) }}" class="font-bold text-gray-600 text-sm content-center">
+                        <p class='font-bold uppercase'>Hola:{{ auth()->user()->name }}</p>
+                        </a>
                         <form class='content-center' method="POST" action={{ route('logout') }}>
                             @csrf
                             <button class='font-bold uppercase ' type='submit'>Cerrar sesión</button>
