@@ -17,7 +17,8 @@
     <div class="md:flex md:justify-center md:gap-8 md:items-center ">
         <div class="md:w-5/12 p-5">
             <form action="{{ route('img.store') }}" method="POST" class="dropzone border-dashed border-2 w-full h-96 rounded flex flex-col justify-center items-center" id='dropzone'>
-            
+                @csrf
+                
             </form>
 
         </div>

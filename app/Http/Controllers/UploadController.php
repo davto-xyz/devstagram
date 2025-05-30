@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class UploadController extends Controller
 {
-    public function store(){
-        return ('desde upload controller');
+    public function store(Request $request){
+        $img= $request->file('file');
+        return response()->json(['name'=>$img]);
     }
 }
