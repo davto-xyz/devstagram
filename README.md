@@ -6,6 +6,8 @@
 
 DevStagram es una red social diseñada específicamente para desarrolladores, donde pueden compartir sus proyectos, fragmentos de código y avances técnicos en un entorno visual inspirado en Instagram.
 
+> Este proyecto fue desarrollado siguiendo el curso: [Laravel: Crea Aplicaciones y Sitios Web con PHP y MVC](https://www.udemy.com/course/curso-laravel-crea-aplicaciones-y-sitios-web-con-php-y-mvc/) de Udemy.
+
 ## 🚀 Demo
 
 **¡Prueba la aplicación en vivo!**: [https://devstagram-davto-xyz.domcloud.dev/](https://devstagram-davto-xyz.domcloud.dev/)
