@@ -7,13 +7,13 @@
         @stack('script')
         
         <title>DevStagram</title>
-
+        @livewireStyles
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="antialiased ">
         <header class="p-5 border-t-2 border-b shadow bg-white">
             <div class="container mx-auto flex justify-between items-center ">
-                <h1 class="font-black text-3xl">DevStagram</h1>
+                <h1 class="font-black text-3xl"><a href="{{ route('home.index') }}">DevStagram</a></h1>
 
                 <nav class=' text-gray-600 text-sm bg-white flex gap-2'>
                     @auth
@@ -49,5 +49,6 @@ Crear post</a>
             <footer class="text-center font-bold p-9">
                 DevStagram - {{now()->year}}
             </footer>
+            @livewireScripts
     </body>
 </html>

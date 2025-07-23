@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -31,7 +32,8 @@ class RegisterController extends Controller
             'name'=>$request->name,
             'username'=>$request->username,
             'email'=>$request->email,
-            'password'=>$request->password
+            'password'=>$request->password,
+            'imagen' => ''
         ]);
 
 
@@ -39,7 +41,7 @@ class RegisterController extends Controller
 
         auth()->attempt($request->only('email','password'));
 
-        return redirect()->route('posts.index');
+        return redirect()->route('posts.index',['user'=>Auth::user()->username]);
 
     }
 }

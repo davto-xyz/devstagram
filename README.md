@@ -97,4 +97,8 @@ Si quieres contribuir al proyecto:
 
 ## Licencia
 
+<<<<<<< HEAD
 Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+=======
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+>>>>>>> 3921220 (Implement post grid component, like button functionality, profile editing page, and post detail view with comments)

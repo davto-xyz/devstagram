@@ -16,14 +16,14 @@
 
     <div class="md:flex md:justify-center md:gap-8 md:items-center ">
         <div class="md:w-5/12 p-5">
-            <form action="{{ route('img.store') }}" method="POST" class="dropzone border-dashed border-2 w-full h-96 rounded flex flex-col justify-center items-center" id='dropzone'>
+            <form action="{{ route('img.store') }}" method="POST" class="dropzone border-dashed border-2 w-full h-96 rounded flex flex-col justify-center items-center" id='dropzone' enctype="multipart/form-data">
                 @csrf
                 
             </form>
 
         </div>
         <div class="md:w-4/12 bg-white rounded-lg p-6 shadow-2xl">
-            <form action="{{ route('register') }}" method="POST" novalidate >
+            <form action="{{ route('posts.store') }}" method="POST" novalidate >
                 @csrf
                 <div class="mb-5">
                     <label for="titulo" class="mb-2 block uppercase text-gray-600 font-bold">Título</label>
@@ -39,10 +39,10 @@
                 </div>
                 <div class="mb-5">
                     <label for="descripcion" class="mb-2 block uppercase text-gray-600 font-bold">Descripción</label>
-                    <textarea id="descripcion" name="descripcion" type="text"
+                    <textarea id="descripcion" name="descripcion" 
                         class="border p-3 w-full rounded-lg  @error('name') border-red-600 @enderror"
                        
-                    />
+                    >{{ old('descripcion') }}</textarea>
                     @error('descripcion')
                         <p class="bg-red-700 text-white my-2 rounded-lg text-sm p-2 text-center ">
                             {{ $message }}
@@ -51,8 +51,13 @@
                     </textarea>
                 </div>
 
-               
-
+                <input type="hidden" name="imagen" id="imagen" value="{{ old('imagen') }}">
+                @error('imagen')
+                        <p class="bg-red-700 text-white my-2 rounded-lg text-sm p-2 text-center ">
+                            {{ $message }}
+                        </p>
+                    @enderror
+                    
                 <input type="submit" value="Crear publicación"
                     class="bg-sky-800 hover:bg-amber-700 trasitions-colora
                     cursor-pointer uppercase font-bold w-full p-3 text-white rounded-lg">
