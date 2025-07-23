@@ -1,7 +1,7 @@
 # DevStagram
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/davidtorres-xyz/devstagram/main/public/img/devstagram-logo.svg" alt="DevStagram Logo" width="200"/>
+  <img src="https://raw.githubusercontent.com/davidtorres-xyz/devstagram/main/public/img/devstagram_logo.png" alt="DevStagram Logo" width="200"/>
 </p>
 
 DevStagram es una red social diseñada específicamente para desarrolladores, donde pueden compartir sus proyectos, fragmentos de código y avances técnicos en un entorno visual inspirado en Instagram.
