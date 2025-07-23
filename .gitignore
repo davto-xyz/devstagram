@@ -1,19 +1,71 @@
+# Dependencias
 /node_modules
+/vendor
+
+# Directorios de Laravel
 /public/hot
 /public/storage
 /storage/*.key
-/vendor
+/bootstrap/cache/*
+!bootstrap/cache/.gitignore
+
+# Archivos de entorno y configuración sensible
 .env
+.env.*
 .env.backup
 .env.production
-.phpunit.result.cache
-Homestead.json
-Homestead.yaml
+.env.local
+.env.development
+.env.testing
 auth.json
+*.pem
+*.key
+*.cert
+*.p12
+
+# Archivos de caché y logs
+.phpunit.result.cache
 npm-debug.log
 yarn-error.log
+*.log
+.cache/
+.php_cs.cache
+
+# Uploads de usuario (excepto el archivo .gitkeep)
+/public/uploads/*
+!public/uploads/.gitkeep
+
+# Archivos específicos de IDE y editores
 /.fleet
 /.idea
 /.vscode
-/public/uploads/*
-!public/uploads/.gitkeep
+/.phpstorm.meta.php
+/_ide_helper.php
+/_ide_helper_models.php
+.DS_Store
+Thumbs.db
+
+# Archivos de credenciales y configuración local
+config/local-*.php
+config/*.local.php
+*.local.php
+*.swp
+*.swo
+
+# Archivos de despliegue y configuración de servidor
+*.sql
+*.dump
+.htaccess.local
+apache-config.local
+nginx-config.local
+php.ini
+
+# Archivos específicos de Docker
+docker-compose.override.yml
+
+# Archivos de bases de datos SQLite
+*.sqlite
+*.sqlite3
+
+# Directorio de configuración personal
+.config/
