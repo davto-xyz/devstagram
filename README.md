@@ -1,104 +1,125 @@
-# Devstagram
+# DevStagram
 
-Red social similar a Instagram desarrollada con Laravel.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/davidtorres-xyz/devstagram/main/public/img/devstagram-logo.svg" alt="DevStagram Logo" width="200"/>
+</p>
 
-## Características
+DevStagram es una red social diseñada específicamente para desarrolladores, donde pueden compartir sus proyectos, fragmentos de código y avances técnicos en un entorno visual inspirado en Instagram.
 
-- Sistema de autenticación de usuarios
-- Subida y edición de imágenes
-- Publicaciones con descripciones
-- Sistema de likes
-- Seguimiento de usuarios
-- Perfil de usuario personalizable
-- Comentarios en publicaciones
-- Responsive design con Tailwind CSS
+## 🚀 Demo
 
-## Tecnologías utilizadas
+Visita la demo en: [https://devstagram-davto-xyz.domcloud.dev/](https://devstagram-davto-xyz.domcloud.dev/)
 
-- **Backend**: Laravel 10
-- **Frontend**: Blade Templates, Tailwind CSS
-- **Base de datos**: MySQL
-- **Servidor de imágenes**: Intervention Image
-- **JavaScript**: Alpine.js, Dropzone.js
+## ✨ Características
 
-## Instalación
+- **Sistema de Autenticación Completo**: Registro personalizado, login y gestión de sesiones
+- **Perfiles de Usuario**: Usernames únicos y avatares personalizables
+- **Publicaciones con Imágenes**: Carga de imágenes mediante drag & drop
+- **Feed de Publicaciones**: Timeline personalizado con contenido de usuarios seguidos
+- **Sistema Social**: Seguidores/seguidos, likes y comentarios en tiempo real
+- **Dashboard Personalizado**: Vista principal adaptada a tus intereses
+- **Diseño Responsive**: Optimizado para cualquier dispositivo
 
-1. Clona el repositorio:
-```bash
-git clone https://github.com/tu-usuario/devstagram.git
-cd devstagram
+## 🛠️ Stack Tecnológico
+
+### Backend
+- **Laravel 10**: Framework PHP con arquitectura MVC
+- **PHP 8.1+**: Aprovechando las características más modernas del lenguaje
+- **MySQL**: Base de datos relacional
+- **Laravel Sanctum**: Autenticación y protección de rutas
+- **Intervention/Image**: Procesamiento y optimización de imágenes
+
+### Frontend
+- **Tailwind CSS**: Framework CSS utility-first
+- **Vite**: Build tool para frontend
+- **JavaScript**: Vanilla JS con funcionalidades específicas
+- **Dropzone.js**: Subida de imágenes mediante drag & drop
+- **Livewire**: Para interactividad en tiempo real (comentarios, likes)
+
+## 🗂️ Estructura del Proyecto
+
+```
+devstagram/
+├── app/                    # Lógica principal de la aplicación
+│   ├── Http/Controllers/   # Controladores que manejan las peticiones
+│   ├── Models/             # Modelos Eloquent para interactuar con la BD
+│   └── ...
+├── resources/              # Assets y vistas
+│   ├── views/              # Plantillas Blade
+│   ├── js/                 # JavaScript
+│   └── css/                # Archivos CSS (Tailwind)
+├── routes/                 # Definición de rutas
+│   └── web.php             # Rutas web organizadas por secciones
+├── public/                 # Archivos públicos accesibles
+│   └── uploads/            # Imágenes subidas por los usuarios
+└── database/               # Migraciones y seeds
+    └── migrations/         # Esquema de la base de datos
 ```
 
-2. Instala las dependencias de PHP:
-```bash
-composer install
-```
+## 🔄 Relaciones de Base de Datos
 
-3. Instala las dependencias de Node.js:
-```bash
-npm install
-```
+- **User**: Relaciones hasMany con Posts, Likes y belongsToMany para followers/following
+- **Post**: belongsTo User, hasMany Comments y Likes
+- **Like**: belongsTo User y Post
+- **Comentario**: belongsTo User y Post
+- **Follower**: Tabla pivote para relación many-to-many entre usuarios
 
-4. Copia el archivo de configuración:
-```bash
-cp .env.example .env
-```
+## 📥 Instalación y Configuración
 
-5. Genera la clave de aplicación:
-```bash
-php artisan key:generate
-```
+1. **Clonar el repositorio**:
+   ```bash
+   git clone https://github.com/tu-usuario/devstagram.git
+   cd devstagram
+   ```
 
-6. Configura tu base de datos en el archivo `.env`
+2. **Instalar dependencias**:
+   ```bash
+   composer install
+   npm install
+   ```
 
-7. Ejecuta las migraciones:
-```bash
-php artisan migrate
-```
+3. **Configurar entorno**:
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-8. Compila los assets:
-```bash
-npm run dev
-```
+4. **Configurar base de datos** en el archivo `.env`
 
-9. Inicia el servidor de desarrollo:
-```bash
-php artisan serve
-```
+5. **Ejecutar migraciones**:
+   ```bash
+   php artisan migrate
+   ```
 
-## Uso
+6. **Compilar assets**:
+   ```bash
+   npm run dev
+   ```
 
-1. Regístrate o inicia sesión en la aplicación
-2. Completa tu perfil con imagen y descripción
-3. Sube publicaciones con imágenes y descripciones
-4. Sigue a otros usuarios
-5. Da likes y comenta en las publicaciones
-6. Explora el muro de publicaciones
+7. **Iniciar servidor de desarrollo**:
+   ```bash
+   php artisan serve
+   ```
 
-## Estructura del proyecto
+## 💻 Uso
 
-- `app/Http/Controllers/` - Controladores de la aplicación
-- `app/Models/` - Modelos Eloquent
-- `resources/views/` - Plantillas Blade
-- `resources/js/` - Archivos JavaScript
-- `resources/css/` - Archivos CSS
-- `database/migrations/` - Migraciones de base de datos
-- `public/uploads/` - Imágenes subidas por usuarios
+1. Regístrate con email, nombre y username único
+2. Personaliza tu perfil con una imagen y descripción
+3. Explora el feed principal o perfiles de otros desarrolladores
+4. Sigue a usuarios cuyos proyectos te interesen
+5. Publica tus propios proyectos con imágenes y descripciones
+6. Interactúa mediante likes y comentarios
 
-## Contribución
+## 📜 Licencia
 
-Si quieres contribuir al proyecto:
-
-1. Fork el repositorio
-2. Crea una rama para tu feature (`git checkout -b feature/nueva-caracteristica`)
-3. Commit tus cambios (`git commit -am 'Añade nueva característica'`)
-4. Push a la rama (`git push origin feature/nueva-caracteristica`)
-5. Abre un Pull Request
-
-## Licencia
-
-<<<<<<< HEAD
 Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-=======
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
->>>>>>> 3921220 (Implement post grid component, like button functionality, profile editing page, and post detail view with comments)
+
+## 👨‍💻 Autor
+
+David Torres - [LinkedIn](https://linkedin.com/in/davidtorreslopez) - [GitHub](https://github.com/davidtorres-xyz)
+
+---
+
+<p align="center">
+  Desarrollado con ❤️ usando Laravel y Tailwind CSS
+</p>
