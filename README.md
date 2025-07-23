@@ -8,7 +8,9 @@ DevStagram es una red social diseñada específicamente para desarrolladores, do
 
 ## 🚀 Demo
 
-Visita la demo en: [https://devstagram-davto-xyz.domcloud.dev/](https://devstagram-davto-xyz.domcloud.dev/)
+**¡Prueba la aplicación en vivo!**: [https://devstagram-davto-xyz.domcloud.dev/](https://devstagram-davto-xyz.domcloud.dev/)
+
+Registra una cuenta o explora el feed público para ver la funcionalidad completa.
 
 ## ✨ Características
 
@@ -122,4 +124,8 @@ David Torres - [LinkedIn](https://linkedin.com/in/davidtorreslopez) - [GitHub](h
 
 <p align="center">
   Desarrollado con ❤️ usando Laravel y Tailwind CSS
+</p>
+
+<p align="center">
+  <a href="https://devstagram-davto-xyz.domcloud.dev/" target="_blank">🔗 Visita DevStagram</a>
 </p>
