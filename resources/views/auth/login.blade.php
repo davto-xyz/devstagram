@@ -22,7 +22,7 @@
 
                 <div class="mb-5">
                     <label for="email" class="mb-2 block uppercase text-gray-600 font-bold">Email</label>
-                    <input id="email" name="email" type="email" placeholder="Tu Email"
+                    <input id="email" name="email" type="email" placeholder="Tu email"
                         class="border p-3 w-full rounded-lg @error('email') border-red-600 @enderror"
                         value="{{ old('email') }}"
                     />
