@@ -120,7 +120,7 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 ## 👨‍💻 Autor
 
-David Torres - [LinkedIn](https://linkedin.com/in/davidtorreslopez) - [GitHub](https://github.com/davidtorres-xyz)
+David Torres - [LinkedIn](https://www.linkedin.com/in/david-torres-l%C3%B3pez/) - [GitHub](https://github.com/davto-xyz)
 
 ---
 
